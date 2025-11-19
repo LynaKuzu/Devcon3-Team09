@@ -1,3 +1,3 @@
 Contributors:
-Alex(Lyna) O
+Alex(Lyna) O,
 Daniel C
