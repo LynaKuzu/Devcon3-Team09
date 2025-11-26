@@ -33,5 +33,7 @@ We believe that this more dynmaic and tricky level of control that the player wi
 
 _Metric Research and References for Curling Stone & Sheet:_ https://worldcurling.org/rules/
 
+- AI used to provide some code (commented)
+
 
 

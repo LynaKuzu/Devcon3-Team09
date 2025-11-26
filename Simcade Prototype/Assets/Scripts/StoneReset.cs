@@ -10,6 +10,8 @@ public class StoneReset : MonoBehaviour
     private Vector3 position;
     private Quaternion orientation;
 
+    public StoneMove stonemove;
+
     private void Awake()
     {
         if (StoneRB == null)
@@ -26,6 +28,7 @@ public class StoneReset : MonoBehaviour
     {
         if (Input.GetKeyDown(ResetKey))
         {
+            stonemove.HasShot = false;
             StoneRB.MovePosition(position);
             StoneRB.MoveRotation(orientation);
             StoneRB.velocity = Vector3.zero;
