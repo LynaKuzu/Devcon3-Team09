@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StoneMove : MonoBehaviour
@@ -9,8 +10,17 @@ public class StoneMove : MonoBehaviour
     [field: SerializeField] public float ChargeForce { get; private set; } = 1;
     [field: SerializeField] public float ChargeFeet { get; private set; } = 1;
     [field: SerializeField] public bool IsCharging { get; private set; }
-    [field: SerializeField] public float ChargeTime { get; private set; } = 1;
+    [field: SerializeField] public bool HasShot; 
+    [field: SerializeField] public float ChargeTime = 1;
     [field: SerializeField] public KeyCode ShootKey { get; private set; } = KeyCode.Space;
+    [field: SerializeField] public KeyCode LeftKey { get; private set; } = KeyCode.A;
+    [field: SerializeField] public KeyCode RightKey { get; private set; } = KeyCode.D;
+
+    [field: SerializeField] public float LeftMove = 0f;
+    [field: SerializeField] public float RightMove = 0f;
+    private Rigidbody rb;
+
+
 
 
     private void Awake()
@@ -20,11 +30,14 @@ public class StoneMove : MonoBehaviour
             string msg = $"Missing Component {nameof(Rigidbody)} {nameof(StoneRB)}.";
             throw new MissingComponentException(msg);
         }
+        rb = GetComponent<Rigidbody>();
+
+         
     }
 
     private void Update()
     {
-        if (Input.GetKey(ShootKey))
+        if (Input.GetKey(ShootKey) && HasShot == false)
         {
             IsCharging = true;
             ChargeTime += Time.deltaTime;
@@ -33,6 +46,7 @@ public class StoneMove : MonoBehaviour
         if (Input.GetKeyUp(ShootKey) && ChargeTime >= 1)
         {
             ChargeShot();
+            HasShot = true;
         }
         else if (Input.GetKeyUp(ShootKey) && ChargeTime < 1)
         {
@@ -42,17 +56,33 @@ public class StoneMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (!DoShoot)
-            return;
-        //DoShoot = false;
 
-        Vector3 kickDirection = StoneRB.transform.forward;
-        Vector3 force = ChargeForce * kickDirection;
-        StoneRB.AddForce(force, ForceMode.Impulse);
+        if (Input.GetKey(KeyCode.A))
+        {
+            LeftMove += 1f;
+            RightMove -= 1f;
+            if (LeftMove > 3f && RightMove < -3f)
+            {
+                LeftMove = 3f;
+                RightMove = -3f;
+            }
+            StoneRB.velocity = new Vector3(LeftMove, rb.velocity.y, rb.velocity.z);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            LeftMove -= 1f;
+            RightMove += 1f;
+            if (LeftMove < -3f && RightMove > 3f)
+            {
+                LeftMove = -3f;
+                RightMove = 3f;
+            }
+            StoneRB.velocity = new Vector3(RightMove, rb.velocity.y, rb.velocity.z);
+        }
 
-        Vector3 kickSpinDirection = StoneRB.transform.up;
-        Vector3 torque = ChargeFeet * kickSpinDirection;
-        StoneRB.AddTorque(torque, ForceMode.Impulse);
+        
+
+
     }
 
     private void Reset()
@@ -64,7 +94,7 @@ public class StoneMove : MonoBehaviour
     void ChargeShot ()
     {
         ChargeForce = ChargeTime;
-        StoneRB.AddForce(ShotPoint.forward * ChargeForce, ForceMode.Impulse);
+        StoneRB.AddForce((ShotPoint.forward * ChargeForce) * 5, ForceMode.Impulse);
 
         IsCharging = false;
         ChargeTime = 0;
