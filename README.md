@@ -1,6 +1,5 @@
 Contributors:
-Alex(Lyna),
-Daniel,
-
+Alex(Lyna)
+Daniel
 Allen 
 
