@@ -16,8 +16,7 @@ public class StoneMove : MonoBehaviour
     [field: SerializeField] public KeyCode LeftKey { get; private set; } = KeyCode.A;
     [field: SerializeField] public KeyCode RightKey { get; private set; } = KeyCode.D;
 
-    [field: SerializeField] public float LeftMove = 0f;
-    [field: SerializeField] public float RightMove = 0f;
+    [field: SerializeField] public float RockMove = 0f;
     private Rigidbody rb;
 
 
@@ -56,31 +55,32 @@ public class StoneMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        if (Input.GetKey(KeyCode.A))
+        if(RockMove > 0f)
         {
-            LeftMove += 1f;
-            RightMove -= 1f;
-            if (LeftMove > 3f && RightMove < -3f)
-            {
-                LeftMove = 3f;
-                RightMove = -3f;
-            }
-            StoneRB.velocity = new Vector3(LeftMove, rb.velocity.y, rb.velocity.z);
+            RockMove += -0.1f;
+        }
+        if (RockMove < 0f)
+        {
+            RockMove += 0.1f;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            LeftMove -= 1f;
-            RightMove += 1f;
-            if (LeftMove < -3f && RightMove > 3f)
+            RockMove += 1f;
+            if (RockMove > 3f)
             {
-                LeftMove = -3f;
-                RightMove = 3f;
+                RockMove = 3f;
             }
-            StoneRB.velocity = new Vector3(RightMove, rb.velocity.y, rb.velocity.z);
         }
+        if (Input.GetKey(KeyCode.A))
+        {
+            RockMove -= 1f;
+            if (RockMove < -3f)
+            {
+                RockMove = -3f;
+            }
+        }
+        StoneRB.velocity = new Vector3(RockMove, rb.velocity.y, rb.velocity.z);
 
-        
 
 
     }
@@ -93,6 +93,7 @@ public class StoneMove : MonoBehaviour
 
     void ChargeShot ()
     {
+
         ChargeForce = ChargeTime;
         StoneRB.AddForce((ShotPoint.forward * ChargeForce) * 5, ForceMode.Impulse);
 
