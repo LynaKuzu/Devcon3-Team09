@@ -1,9 +1,3 @@
-Contributors:  
-
-Alex(Lyna)  
-
-Daniel  
-
-Allen  
-
-
+Contributors:
+Alex(Lyna) O,
+Daniel C
