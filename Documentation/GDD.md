@@ -1,14 +1,16 @@
-# GAME: Player Skee-Ball
-# GAME: Player [Skee-Ball/Curling]
+# **Skee-Ball / Curling**
 
-## Overview 
+# 1. Overview 
 
 > What are you making?
 
-We are making a 'Skee-ball'-esque game where the player will control a ball that they load with speed and force before releasinging it, where they will then need to navigate and weave between obstacles to reach the ramp at the end and land in a hole to earn points
-We are making a ['Skee-ball'-esque / Curling] game where the player will control a [ball/rock] that they load with speed and force before releasing it, where they will then need to navigate and weave between obstacles to reach the [ramp at the end and land in a hole to earn points / circle and try and stop on the middle]
+This project is a hybrid between Skee-Ball and Curling, where players launch a ball by charging force and then steer it left or right while it moves. The goal is to navigate obstacles and land in a scoring hole or stop within curling-style scoring rings. Unlike traditional Skee-Ball, this prototype emphasizes continuous player engagement through mid-roll control and precision navigation.
 
-## Objective Statement 
+<img width="1919" height="765" alt="Screenshot 2025-12-02 235638" src="https://github.com/user-attachments/assets/966a0bd2-47e7-4b34-ad62-821126c44c21" />
+
+
+
+# 2. Objective Statement 
 
 > What question are you trying to answer with your prototype? Why?
 
@@ -16,13 +18,13 @@ The question we are trying to answer with our prototype is: Will it will be more
 
 Some games are fun for being mostly mindless, while others are fun for how engaging they are. We want to be able to see which way players feel about Skee-ball, and which version they ultimately prefer.
 
-## Design Rationale 
+# 3. Design Rationale 
 
 > What do you envision? How is the game experience informed by metrics? How is it engaging beyond a simulation?
 
 We believe that this more dynmaic and tricky level of control that the player will be presented with will lead to a more interesting and less mindless way to play a game that takes a unique spin compared to how the game is played. 
 
-## Metric Research and References
+# 4. Metric Research and References
 
 > What real-world information are you leveraging to inform objects scale, weight, friction, etc?
 
@@ -31,11 +33,40 @@ We believe that this more dynmaic and tricky level of control that the player wi
 - Curling Sheet: 146 to 150 feet (45 to 46 m) in length by 14.5 to 16.5 feet (4.4 to 5.0 m) in width.
 	- House: A target, the house, is centred on the intersection of the centre line, drawn lengthwise down the centre of the sheet and the tee line, drawn 16 feet (4.9 m) from, and parallel to, the backboard. These lines divide the house into quarters. The house consists of a centre circle (the button) and three concentric rings, of diameters 4, 8, and 12 feet
 
-## Citations
+# 5. Gameplay Elements
+* Charge shot stregth
+* Charge shot strength
+* Release stone
+* Steer during movement (left/right)
+* Avoid obstacles
+* Reach scoring area
+* Score based on where the ball stops or lands
+
+# 6. Core Loop
+1. Player charges up force
+2. Player releases the stone
+3. Player navigates left/right while avoiding obstacles during travel
+4. Player attempts to hit optimal scoring zone
+5. Points awarded based on accuracy
+6. Repeat for next round
+
+# 7. Front End
+* Power meter (charge indication)
+<img width="107" height="328" alt="Screenshot 2025-12-02 235538" src="https://github.com/user-attachments/assets/78efb2be-b0c5-4886-b220-5a3354c6b4eb" />
+
+* Score UI 
+<img width="239" height="71" alt="Screenshot 2025-12-03 000511" src="https://github.com/user-attachments/assets/7392062a-fae9-4098-ae46-805a356542b6" />
+
+# 8. Citations
 
 _Metric Research and References for Curling Stone & Sheet:_ https://worldcurling.org/rules/
 
 - AI used to provide some code (commented)
+
+
+
+
+
 
 
 
