@@ -39,7 +39,7 @@ public class ScoreUI : MonoBehaviour
             displayedScore = Mathf.RoundToInt(Mathf.Lerp(start, end, n));
             scoreText.text = "Score: " + displayedScore;
 
-            float scale = Mathf.Lerp(1.3f, 1f, n);
+            float scale = Mathf.Lerp(2.6f, 3f, n);
             scoreText.transform.localScale = Vector3.one * scale;
 
             yield return null;

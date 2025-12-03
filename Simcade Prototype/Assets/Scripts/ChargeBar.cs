@@ -19,7 +19,7 @@ public class ChargeBar : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Bar.value = stonemove.ChargeTime;
     }

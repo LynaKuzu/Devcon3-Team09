@@ -80,6 +80,7 @@ public class StoneMove : MonoBehaviour
             }
         }
         StoneRB.velocity = new Vector3(RockMove, rb.velocity.y, rb.velocity.z);
+        
 
 
 
@@ -95,7 +96,11 @@ public class StoneMove : MonoBehaviour
     {
 
         ChargeForce = ChargeTime;
-        StoneRB.AddForce((ShotPoint.forward * ChargeForce) * 5, ForceMode.Impulse);
+        if (ChargeForce > 5)
+        {
+            ChargeForce = 5;
+        }
+        StoneRB.AddForce((ShotPoint.forward * ChargeForce) * 300, ForceMode.Impulse);
 
         IsCharging = false;
         ChargeTime = 0;

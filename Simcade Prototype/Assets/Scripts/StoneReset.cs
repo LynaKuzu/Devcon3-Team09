@@ -31,6 +31,7 @@ public class StoneReset : MonoBehaviour
             stonemove.HasShot = false;
             StoneRB.MovePosition(position);
             StoneRB.MoveRotation(orientation);
+            stonemove.RockMove = 0;
             StoneRB.velocity = Vector3.zero;
             StoneRB.angularVelocity = Vector3.zero;
             foreach (var script in FindObjectsByType<StoneDebug>(FindObjectsSortMode.None))
