@@ -10,7 +10,7 @@ Players launch a ball using a force-charging mechanic and steer left or right mi
 5. Press **[R]** to reset
 
 
-Contributors:  
+## Contributors:  
 
 Alex(Lyna)  
 
