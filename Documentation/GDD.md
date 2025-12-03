@@ -36,7 +36,7 @@ We believe that this more dynmaic and tricky level of control that the player wi
 # 5. Gameplay Elements
 * Charge shot stregth
 * Charge shot strength
-* Release stone/ball
+* Release stone
 * Steer during movement (left/right)
 * Avoid obstacles
 * Reach scoring area
@@ -44,15 +44,10 @@ We believe that this more dynmaic and tricky level of control that the player wi
 
 # 6. Core Loop
 1. Player charges up force
-
-2. Player releases the ball/stone
-
+2. Player releases the stone
 3. Player navigates left/right while avoiding obstacles during travel
-
 4. Player attempts to hit optimal scoring zone
-
 5. Points awarded based on accuracy
-
 6. Repeat for next round
 
 # 7. Front End
@@ -67,6 +62,7 @@ We believe that this more dynmaic and tricky level of control that the player wi
 _Metric Research and References for Curling Stone & Sheet:_ https://worldcurling.org/rules/
 
 - AI used to provide some code (commented)
+
 
 
 
