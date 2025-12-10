@@ -57,11 +57,24 @@ We believe that this more dynmaic and tricky level of control that the player wi
 * Score UI 
 <img width="239" height="71" alt="Screenshot 2025-12-03 000511" src="https://github.com/user-attachments/assets/7392062a-fae9-4098-ae46-805a356542b6" />
 
-# 8. Citations
+# 8. Playtest 
+## Feedback
+* The camera spinning with the stone was the most common complaint.
+* Pressing A and D moved the stone in the same direction; left/right steering did not behave as expected.
+* Ice friction felt inconsistent, either too high or too low, leading to unrealistic sliding.
+* Players liked the overall concept, especially the idea of obstacles and the hybrid gameplay approach.
 
+## Iteration
+* Removed camera rotation inheritance and implemented a smoother follow camera to eliminate jitter and stabilize the view along the lane.
+* Corrected left/right input so A reliably moves left and D moves right, removing mirrored movement behavior.
+* Added controlled drag and custom friction to better simulate ice, and locked X/Z rotation to prevent unwanted rolling or tipping.
+* Resolved rigidbody sleep-state issues to ensure consistent movement, collision handling, and scoring detection.
+
+# 9. Citations
 _Metric Research and References for Curling Stone & Sheet:_ https://worldcurling.org/rules/
 
 - AI used to provide some code (all provided code was to our knowledge modified to a meaningful degree and only used to figure out paths forwards towards solutions)
+
 
 
 
