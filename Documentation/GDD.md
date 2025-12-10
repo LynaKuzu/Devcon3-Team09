@@ -14,15 +14,13 @@ This project is a hybrid between Skee-Ball and Curling, where players launch a b
 
 > What question are you trying to answer with your prototype? Why?
 
-The question we are trying to answer with our prototype is: Will it will be more interesting for players to need to control their skee-balls through a sort of obstacle course through navigating left and right, to be able to reach the holes at the end?
-
-Some games are fun for being mostly mindless, while others are fun for how engaging they are. We want to be able to see which way players feel about Skee-ball, and which version they ultimately prefer.
+The question we are trying to answer with our prototype is: Will it will be more interesting for players to need to control their stone through a sort of obstacle course through navigating left and right, to be able to reach the house at the end?
 
 # 3. Design Rationale 
 
 > What do you envision? How is the game experience informed by metrics? How is it engaging beyond a simulation?
 
-We believe that this more dynmaic and tricky level of control that the player will be presented with will lead to a more interesting and less mindless way to play a game that takes a unique spin compared to how the game is played. 
+We believe that this more dynmaic and difficult level of control that the player will be presented with will lead to a more interesting and less mindless way to play a game that takes a unique spin compared to how the game is played. 
 
 # 4. Metric Research and References
 
@@ -74,6 +72,7 @@ We believe that this more dynmaic and tricky level of control that the player wi
 _Metric Research and References for Curling Stone & Sheet:_ https://worldcurling.org/rules/
 
 - AI used to provide some code (all provided code was to our knowledge modified to a meaningful degree and only used to figure out paths forwards towards solutions)
+
 
 
 
