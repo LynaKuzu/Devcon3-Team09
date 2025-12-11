@@ -32,7 +32,6 @@ We believe that this more dynmaic and difficult level of control that the player
 	- House: A target, the house, is centred on the intersection of the centre line, drawn lengthwise down the centre of the sheet and the tee line, drawn 16 feet (4.9 m) from, and parallel to, the backboard. These lines divide the house into quarters. The house consists of a centre circle (the button) and three concentric rings, of diameters 4, 8, and 12 feet
 
 # 5. Gameplay Elements
-* Charge shot stregth
 * Charge shot strength
 * Release stone
 * Steer during movement (left/right)
@@ -72,6 +71,7 @@ We believe that this more dynmaic and difficult level of control that the player
 _Metric Research and References for Curling Stone & Sheet:_ https://worldcurling.org/rules/
 
 - AI used to provide some code (all provided code was to our knowledge modified to a meaningful degree and only used to figure out paths forwards towards solutions)
+
 
 
 
